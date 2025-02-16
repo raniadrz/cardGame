@@ -43,12 +43,11 @@
     border-radius: 5px;
     margin: 5px;
   }
-  
-  button:hover {
-    background-color: #45a049;
+
+  .button:hover {
+    background-color: #bff3c1;
   }
   
-  button:active {
-    background-color: #38798e;
+  .button:active {
+    background-color: #a8d5aa;
   }
-  

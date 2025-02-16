@@ -1,25 +1,32 @@
 import React, { useState } from 'react';
 import GameBoard from './components/GameBoard'; // Memory Card Game component
 import TicTacToe from './components/TicTacToe'; // Tic-Tac-Toe component
+import HomePage from './components/HomePage'; // Home page component
 import './App.css'; // Optional: for styling
 
 function App() {
-  const [game, setGame] = useState('memory'); // Track the current game
+  const [currentPage, setCurrentPage] = useState('home'); // Track current page
 
-  const switchGame = (gameType) => {
-    setGame(gameType); // Switch between 'memory' and 'tic-tac-toe'
+  const navigateToGame = (gameType) => {
+    setCurrentPage(gameType); // Switch to the selected game
+  };
+
+  const navigateHome = () => {
+    setCurrentPage('home'); // Go back to the home page
   };
 
   return (
     <div className="app">
-      <div className="game-selector">
-        <button onClick={() => switchGame('memory')}>Memory Card Game</button>
-        <button onClick={() => switchGame('tic-tac-toe')}>Tic-Tac-Toe</button>
-      </div>
-      
-      <div className="game-container">
-        {game === 'memory' ? <GameBoard /> : <TicTacToe />}
-      </div>
+      {currentPage === 'home' ? (
+        <HomePage onNavigate={navigateToGame} />
+      ) : (
+        <div className="game-container">
+          <button className="back-button" onClick={navigateHome}>
+            Back to Home
+          </button>
+          {currentPage === 'memory' ? <GameBoard /> : <TicTacToe />}
+        </div>
+      )}
     </div>
   );
 }

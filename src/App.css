@@ -1,12 +1,31 @@
-.App {
-  text-align: center;
- 
+/* App.css */
+.app {
+  font-family: Arial, sans-serif;
 }
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+.game-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.back-button {
+  margin: 20px;
+  padding: 10px 20px;
+  background-color: #676b67;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.back-button:hover {
+  background-color: #bff3c1;
+}
+
+.back-button:active {
+  background-color: #a8d5aa;
 }

@@ -1,0 +1,44 @@
+/* HomePage.css */
+.home-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+  }
+  
+  h1 {
+    font-size: 3rem;
+    color: #333;
+  }
+  
+  p {
+    font-size: 1.5rem;
+    margin-top: 10px;
+  }
+  
+  .game-buttons {
+    margin-top: 30px;
+  }
+  
+  button {
+    padding: 15px 30px;
+    font-size: 18px;
+    margin: 10px;
+    background-color: #7b7d7b;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+
+  .button:hover {
+    background-color: #bff3c1;
+  }
+  
+  .button:active {
+    background-color: #a8d5aa;
+  }
+  
